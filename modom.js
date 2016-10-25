@@ -101,6 +101,10 @@
         return window.md
     }
 
+    var flipPage = function(degrees = 180) {
+        md.setStyle('body', 'transform', 'rotate(' +  degrees + 'deg)')
+    }
+
     window.md = {
         one,
         all,
@@ -121,6 +125,7 @@
         removeEvent,
         clone,
         getStyle,
-        setStyle
+        setStyle,
+        flipPage
     }
 }())
