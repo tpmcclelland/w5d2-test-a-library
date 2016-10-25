@@ -1,0 +1,14 @@
+{
+  "name": "w5d2-test-a-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
