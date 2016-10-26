@@ -125,13 +125,52 @@ describe('MoDom', function() {
       })
     })
 
+    describe('md.flipPage()', function() {
+        it('should flip the page upside down', function() {
+            md.flipPage(180)
+            expect(document.body.style.transform).to.equal('rotate(180deg)')
+            //flip the page back
+            md.flipPage(360)
+        })
+    })
 })
 
-describe('md.flipPage()', function() {
-    it('should flip the page upside down', function() {
-        md.flipPage(180)
-        expect(document.body.style.transform).to.equal('rotate(180deg)')
-        //flip the page back
-        md.flipPage(360)
+describe('epic mode', function() {
+  describe('md.addEvent()', function() {
+    it('should add an event to an element', function() {
+      md.addEvent('img', 'click', () => console.log('click event fired'))
+      // Ran out of time...
     })
+  })
+
+  describe('md.removeEvent()', function() {
+    it('should remove an event to an element', function() {
+      md.removeEvent('img', 'click', () => console.log('click event fired'))
+      // Ran out of time...
+    })
+  })
+
+  describe('md.clone()', function() {
+    it('should make a clone of an elment', function() {
+      var clone = md.clone('img')
+      // console.dir(clone)
+      // expect(clone).to.eql(document.querySelector('img'))
+      // Ran out of time...
+    })
+  })
+
+  describe('md.getStyle()', function() {
+    it('should get the computed style of an elment', function() {
+      var styles = md.getStyle('img')
+      // console.dir(styles)
+      expect(styles).to.exist
+    })
+  })
+
+  describe('md.setStyle()', function() {
+    it('should set the style of an elment', function() {
+      md.setStyle('h4', 'color', 'red')
+      expect(getComputedStyle(document.querySelector('h4')).color).to.equal('rgb(255, 0, 0)')
+    })
+  })
 })
