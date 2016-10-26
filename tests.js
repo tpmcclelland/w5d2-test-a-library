@@ -57,7 +57,7 @@ describe('MoDom', function() {
   })
 
   describe('md.hasClass()', function() {
-    it('should have a CSS class', function() {
+    it('should return true if element has a CSS class', function() {
       expect(md.hasClass('img', 'img-responsive')).to.be.true
     })
   })
